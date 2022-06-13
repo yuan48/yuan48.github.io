@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .translate{
+            display:flex;
+        }
+        
+        .description {
+        padding: 8px;
+        color: #555;
+        text-align: justify;
+        }
+
+        textarea
+        {
+            background-color:white;
+            font-size:15px;
+            font-family: "宋体","Verdana";
+            margin: 5px;
+            height:200px;
+            width:400px;
+            max-width:100%;
+            resize:none;
+            border-radius: 10px;
+            user-select:none;   
+        }
+
+        .explain{
+            width:650px;
+            height:200px;
+            margin:0px auto;
+        }
+        
+.task-item { display: none; }
+
+.tasks-wrapper {
+  padding: 30px 0;
+  flex: 1;
+  overflow-y: auto;
+  height: 100%;
+  padding-right: 8px;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 16px;
+  padding-left: 30px;
+  color: var(--task-color);
+  font-size: 13px;
+  font-weight: 500;
+}
+label {
+    cursor: pointer;
+  }
+  :root {
+  --checkbox-color: orange;
+}
+
+ label .label-text { 
+     position: relative;
+     font-size:15px;
+
+}
+
+ label .label-text:before {
+  content:'';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  left: -24px;
+  transition: .2s ease;
+}
+
+.task-item:checked + label .label-text:before {
+  background-color: var(--checkbox-color);
+  border: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-check'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 10px;
+  background-position: center;
+  border: 1px solid var(--checkbox-color);
+}
+
+.tags{
+    display:grid;
+    width:500px;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="translate">
+        <div>
+            <textarea>🔎English website</textarea>
+        </div>
+        <div>
+            <textarea>英语网站</textarea>
+        </div>
+    </div>
+    <div class="explain">
+        <div>An announcement on the Beijing government's English news website claimed a 90% support rate for the city's latest Olympic bid. It's not clear how that figure was determined, but if residents are in favor of the idea, it might have to do with secondary benefits promised. 
+            北京政府英文新闻网站上的一份公告称，北京此次申办冬奥会获得了90%的支持率。目前还不清楚这个数据如何而来，但是如果北京人支持申奥，那可能是因为他们考虑到了奥运会可以带来的其他有利影响。</div>
+        </div>
+        <div class="tags">
+            <div class="task">
+                <input class="task-item" name="task" type="checkbox" id="item-1">
+                <label for="item-1">
+                <span class="label-text">四级资料</span>
+                </label>
+            </div>
+            <div class="task">
+                <input class="task-item" name="task" type="checkbox" id="item-2">
+                <label for="item-2">
+                <span class="label-text">六级资料</span>
+                </label>
+            </div>
+            <div class="task">
+                <input class="task-item" name="task" type="checkbox" id="item-3">
+                <label for="item-3">
+                <span class="label-text">课内资料</span>
+                </label>
+            </div>
+            <div class="task">
+                <input class="task-item" name="task" type="checkbox" id="item-4">
+                <label for="item-4">
+                <span class="label-text">英语专业</span>
+                </label>
+            </div>
+            <div class="task">
+                <input class="task-item" name="task" type="checkbox" id="item-5">
+                <label for="item-5">
+                <span class="label-text">英语电影</span>
+                </label>
+            </div>
+            <div class="task">
+                <input class="task-item" name="task" type="checkbox" id="item-6">
+                <label for="item-6">
+                <span class="label-text">英语原著</span>
+                </label>
+            </div>
+            <div class="task">
+                <input class="task-item" name="task" type="checkbox" id="item-7">
+                <label for="item-7">
+                <span class="label-text">英语新闻</span>
+                </label>
+            </div>
+            <div class="task">
+                <input class="task-item" name="task" type="checkbox" id="item-8">
+                <label for="item-8">
+                <span class="label-text">学习交流</span>
+                </label>
+            </div>
+        </div>
+
+        
+        <li>
+            <a href="#">Forum</a>
+            <div class="dropdown-menu" style="margin-left:-203px">
+              <div class="dropdown-inner">
+                  <ul class="list-unstyled">
+                      <li>
+                          <a href="#" class="t">四级</a>
+                      </li>
+                      <li>
+                          <a href="#" class="t">六级</a>
+                      </li>
+                      <li>
+                          <a href="#" class="t">资料</a>
+                      </li>
+                      <li>
+                          <a href="#" class="t">四级</a>
+                      </li>
+                  </ul>
+              </div>
+
+            </div>
+        </li>
+</body>
+</html>

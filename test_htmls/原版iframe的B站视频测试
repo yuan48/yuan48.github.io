@@ -1,0 +1,51 @@
+                    
+                    
+            .videos{
+                display:grid;
+                width:900px;
+                height:400px;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows:1fr 1fr;
+
+                gap:10px;
+                align-items:center;
+                justify-items:center;
+            }
+
+
+            .videos{
+            display:grid;
+            grid-template-columns:380px 380px;
+            grid-template-rows:260px 200px;
+            padding:50px 50px;
+            justify-items: center;
+            justify-content: center;
+            align-items: start;
+            }
+                    
+            .video{
+            width:450px;
+            height:250px;
+            }
+
+                    
+                    
+                    
+                    <div class="videos">
+                        <div class="video video1">
+                          <iframe src="//player.bilibili.com/player.html?aid=4190492&bvid=BV13s411X7Hc&cid=6771553&page=1&as_wide=0&high_quality=1&danmaku=0" scrolling="auto" border="0"  width="80%" height="250" frameborder="0" >
+                          </iframe>
+                        </div>
+                        <div class="video video2">
+                          <iframe src="//player.bilibili.com/player.html?aid=4190492&bvid=BV13s411X7Hc&cid=6771553&page=1&as_wide=0&high_quality=1&danmaku=0" scrolling="yes" border="0"  width="80%" height="250" frameborder="0" >
+                          </iframe>
+                        </div>
+                        <div class="video video3">
+                          <iframe src="//player.bilibili.com/player.html?aid=4190492&bvid=BV13s411X7Hc&cid=6771553&page=1&as_wide=0&high_quality=1&danmaku=0" scrolling="yes" border="0"  width="80%" height="250" frameborder="0" >
+                          </iframe>
+                      </div>
+                        <div class="video video4">
+                          <iframe src="//player.bilibili.com/player.html?aid=4190492&bvid=BV13s411X7Hc&cid=6771553&page=1&as_wide=0&high_quality=1&danmaku=0" scrolling="yes" border="0"  width="80%" height="250" frameborder="0" >
+                           </iframe>
+                        </div>
+                    </div>

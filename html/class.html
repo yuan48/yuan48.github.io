@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+    <link rel="stylesheet" href="css/mutual.css">
+    <title>classwork</title>
+    <script>
+
+        
+
+    </script>
+    <style>
+        body,header{
+            background-color: whitesmoke;
+        }
+        
+        .user-id{
+            height:500px;
+            width:450px;
+            background-color: white;
+        }
+        .header{
+            display: flex;
+            justify-content: space-evenly
+        }
+
+        .notifications{
+            height:700px;
+            width:700px;
+            background-color: white;
+
+        }
+        .homework,.notification,.class-materials{
+            display: flex;
+            height:200px;
+            width:600px;
+            background-color: var(--light_gray);
+            margin:20px auto;
+            border-radius: 10px;
+        }
+
+        .discuss{
+            width:425px;
+            height:500px;
+            background-color: white;
+        }
+
+        .user-pic{
+            margin:20px 100px;
+            width:425px;
+            height:300px;
+        }
+
+        .user-info{
+            width:180px;
+            height:100px;
+            margin:10px auto
+        }
+
+        .user-info p{
+            line-height: 25px;
+            font-size: 15px;
+        }
+
+        .user-type{
+            width:50px;
+            height:30px;
+            margin:10px auto;
+        }
+
+        .user-id,.notifications,.discuss{
+            margin:15px 0px 0px 0px;
+            border-radius: 10px;
+        }
+        .class-info{
+            width:300px;
+            height:190px;
+            margin-left:10px
+        }
+
+        .class-title{
+            width:300px;
+            height:20px;
+            font-size: 15px;
+            margin:60px 10px 10px 10px;
+            padding:0px 0px 0px 29px;
+        }
+                /* 按键button */
+                button {
+        /* Variables */
+        --button_radius: 0.75em;
+        --button_color: #e8e8e8;
+        --button_outline_color: #000000;
+        font-size: 10px;
+        font-weight: bold;
+        border: none;
+        border-radius: var(--button_radius);
+        background: var(--button_outline_color);
+        }
+
+        .button_top {
+        display: block;
+        box-sizing: border-box;
+        border: 2px solid var(--button_outline_color);
+        border-radius: var(--button_radius);
+        padding: 0.75em 1.5em;
+        background: var(--button_color);
+        color: var(--button_outline_color);
+        transform: translateY(-0.2em);
+        transition: transform 0.1s ease;
+        }
+
+        button:hover .button_top {
+        /* Pull the button upwards when hovered */
+        transform: translateY(-0.33em);
+        }
+
+        button:active .button_top {
+        /* Push the button downwards when pressed */
+        transform: translateY(0);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Nav -->
+        
+        <nav class="main-nav">
+            <img src="images/pic1.webp" alt="logo" class="logo">
+            <p>英语平台</p>
+            <!-- <a href class="logo"><i class="fas-fa-untensils"></i>English</a> -->
+      
+            <ul class="main-menu">
+                <!-- <a href="#home" class="active">home</a> -->
+                <li><a href="index.html">Home</a></li>
+                <li><a href="bbs_index.html">Forum</a></li>
+                <li><a href="translate.html">Utils</a></li>
+                <li><a href="class.html">Class</a></li>
+                <li><a href="materials.html">World</a></li>
+            </ul>
+      
+            <div class="icons">
+                <a href="#" class="fa fa-search" id="search-icon"></a>
+                <a href="user.html" class="fa fa-user"></a>
+            </div>
+        </nav>
+  
+          <div style="height: 350px; width: 1650px;" class="bg1">
+              <h1 style="font-size: 4rem;">📖Class AI-2020219111📖</h1>
+              <p style="font-size: 1.5rem;">Meet your classmates and teachers!</p>
+          </div>
+
+
+        
+        <div class="layout" style="height: 1000px;">
+            <header>
+                <div class="header">
+                    <div class="user-id">
+                        <div class="user-card">
+                            <a href="user.html" >
+                                <img style="width:250px;height:250px;border-radius: 125px;" src="images/user.webp" alt="文章1" class="user-pic">
+                            </a>
+                            <div class="user-type">
+                                <li style="font-size:25px;">学生</li>
+                            </div>
+                            <div class="user-info">
+                                <p>学号：2020212097</p>
+                                <p>班级：2020212110</p>
+                                <p>邮箱：txy@bupt.edu.cn</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="notifications">
+                        <div class="homework">
+                            <a href="" style="margin-left:70px;">
+                                <img style="width:200px;border-radius: 15px;" src="images/article1.png">
+                            </a>
+                            <div class="class-info">
+                                <div class="class-title">
+                                    <p style="font-size: 20px;">班级作业</p>
+                                    <p style="line-height:30px;margin-top:20px">点击查看班级作业</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="notification">
+                            <a href="" style="margin-left:70px;">
+                                <img style="width:200px;border-radius: 15px;" src="images/article2.png">
+                            </a>
+                            <div class="class-info">
+                                <div class="class-title">
+                                    <p style="font-size: 20px;">班级通知</p>
+                                    <p style="line-height:30px;margin-top:20px">点击查看班级通知</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="class-materials">
+                            <a href="" style="margin-left:70px;">
+                                <img style="width:200px;border-radius: 15px;" src="images/article3.png">
+                            </a>
+                            <div class="class-info">
+                                <div class="class-title">
+                                    <p style="font-size: 20px;">课堂资料</p>
+                                    <p style="line-height:30px;margin-top:20px">点击查看课堂资料</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="discuss">
+                        <h1 class="forum" style="padding-left:40px;margin-top:30px">讨论区</h1>
+                        <div class="discuss-card" style="margin-top:30px">
+                            <li class="discuss-title" style="font-size:16px;width:400px;height:60px;padding-left:40px;">
+                                <p style="margin:0px auto;width:300px" class="fa fa-book">老师请问期末作业的截止日期是几号？</p>
+                            </li>
+                            <li class="discuss-title" style="font-size:16px;width:400px;height:60px;padding-left:40px;">
+                                <p style="margin:0px auto;width:300px" class="fa fa-book">老师请问课本p123页的第二行....？</p>
+                            </li>
+                            <li class="discuss-title" style="font-size:16px;width:400px;height:60px;padding-left:40px;">
+                                <p style="margin:0px auto;width:300px" class="fa fa-book">老师求发ppt！谢谢老师！</p>
+                            </li>
+                            <div class="input">
+                                <input type="text" style="width:300px;height:120px;margin-left:30px;margin-top:30px;border-radius: 10px">
+                                <button>
+                                    <!-- <input type="submit" class="btn btn-primary" value="提交"> -->
+                                    <span class="button_top"> submit
+                                    </span>
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </header>
+            <footer style="height: 100px; background-color: whitesmoke;">
+                <div id="footer" class="auto">
+                    <div class="bottom">
+                        <a>英语平台</a>
+                    </div>
+                    <div class="copyright">Powered by Tong&Peng ©2022 </div>
+                </div>
+            </footer>
+
+            <!-- <main>
+                <div class="main">
+                </div>
+            </main> -->
+
+
+
+        </div>
+    </div>
+</body>
+</html>

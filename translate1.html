@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <link rel="stylesheet" href="css/mutual.css">
+    <title>Document</title>
+    <style>
+        body {
+        margin: 0;
+        font-family: Helvetica, Arial, sans-serif;
+        }
+
+        h1 {
+        margin: 0;
+        padding: 48px;
+        font-size: 48px;
+        font-weight: 400;
+        text-align: center;
+        color: white;
+        background-color: #2196f3;
+        }
+
+        section {
+        margin: 0 auto;
+        padding: 0 16px;
+        max-width: 1200px;
+        background-color: white;
+        }
+
+        .flex {
+        display: flex;
+        }
+
+        .wrap {
+        flex-wrap: wrap;
+        }
+
+        .input,.output {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 320px;
+        margin: 0 16px;
+        }
+
+        label {
+        margin: 24px 0 0;
+        }
+
+        textarea {
+        resize: vertical;
+        }
+
+        button {
+        align-self: center;
+        margin: 16px 0;
+        }
+
+        aside {
+        margin: 16px;
+        border-radius: 5px;
+        padding: 16px 12px;
+        color: white;
+        align-self: center;
+        background-color: #555;
+        font-family: "Lucida Console", Monaco, monospace;
+        }
+
+        .description {
+        padding: 8px;
+        color: #555;
+        text-align: justify;
+        }
+
+    </style>
+
+</head>
+<body>
+    <nav class="main-nav">
+        <img src="images/pic1.webp" alt="logo" class="logo">
+        <!-- <a href class="logo"><i class="fas-fa-untensils"></i>English</a> -->
+  
+        <ul class="main-menu">
+            <!-- <a href="#home" class="active">home</a> -->
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Forum</a></li>
+            <li><a href="translate.html">Utils</a></li>
+            <li><a href="class.html">Class</a></li>
+            <li><a href="materials.html">World</a></li>
+        </ul>
+  
+        <div class="icons">
+            <a href="#" class="fa fa-bars" id="menu-bars"></a>
+            <a href="#" class="fa fa-heart" id="heart"></a>
+            <a href="#" class="fa fa-search" id="search-icon"></a>
+            <a href="#" class="fa fa-user"></a>
+        </div>
+      </nav>
+
+        <h1>🔎English Translator📚</h1>
+        <section class="flex wrap">
+        <div class="input">
+            <label class="pure-material-textfield-outlined">
+            <textarea id="input" placeholder=" " rows="10">
+                    Input pre-translated text here😊</textarea>
+            <span>English 🇬🇧</span>
+            </label>
+            <button id="clear" class="pure-material-button-outlined center">Clear</button>
+        </div>
+        <div class="output">
+            <label class="pure-material-textfield-outlined">
+            <textarea id="output" placeholder=" " rows="10" readonly="readonly"></textarea>
+            <span>Chinese</span>
+            </label>
+            <button id="copy" class="pure-material-button-contained center">Copy</button>
+        </div>
+        </section>
+        <section class="flex">
+        <aside>&lt;/&gt;</aside>
+        <p class="description">
+            insert to translate
+        </p>
+        <aside>{;}</aside>
+        </section>
+
+        Result Skip Results Iframe
+<h1>🐷 HTML and JSON aware Pig Latin translator 🐽</h1>
+<section class="flex wrap">
+  <div class="input">
+    <label class="pure-material-textfield-outlined">
+      <textarea id="input" placeholder=" " rows="10">&lt;h1&gt;Input&lt;h1&gt;
+Type or paste your input here
+The output will appear on the right side :)</textarea>
+      <span>English 🇬🇧</span>
+    </label>
+    <button id="clear" class="pure-material-button-outlined center">Clear</button>
+  </div>
+  <div class="output">
+    <label class="pure-material-textfield-outlined">
+      <textarea id="output" placeholder=" " rows="10" readonly="readonly"></textarea>
+      <span>Pig Latin 🐷</span>
+    </label>
+    <button id="copy" class="pure-material-button-contained center">Copy</button>
+  </div>
+</section>
+<section class="flex">
+  <aside>&lt;/&gt;</aside>
+  <p class="description">
+    An English to Pig Latin translator which is capable of translating plaintext, text content of HTML markup, values of JSON string, and even HTML embedded in values of JSON string! It's a tool for effortlessly creating mock translation data that can be used in internationalization and localization development.
+  </p>
+  <aside>{;}</aside>
+</section>
+
+
+</body>
+<script type="text/babel">
+    const R_TEXT = /([^<>]+)(?=(<|$))/g;
+const R_WORD = /[a-zA-Z]+/g;
+const VOWELS = 'aeiou';
+
+const input = document.querySelector('#input');
+const clear = document.querySelector('#clear');
+const output = document.querySelector('#output');
+const copy = document.querySelector('#copy');
+
+input.onfocus = () => {
+  input.select();
+};
+output.onfocus = () => {
+  output.select();
+};
+
+input.oninput = () => {
+  const inputValue = input.value;
+  try {
+    const json = JSON.parse(inputValue);
+    traverse(json, translateHtml);
+    output.value = JSON.stringify(json, null, 2);
+  } catch (e) {
+    output.value = translateHtml(inputValue);
+  }
+};
+
+const traverse = (object, callback) => {
+  for (let property in object) {
+    let value = object[property];
+    if (typeof value === 'object') {
+      traverse(value, callback);
+    } else {
+      object[property] = callback(value);
+    }
+  }
+};
+
+const translateHtml = (html) => {
+  return html.replace(R_TEXT, translateText);
+};
+
+const translateText = (match, text) => {
+  return text.replace(R_WORD, translateWord);
+};
+
+</script>
+
+
+
+</html>

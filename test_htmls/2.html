@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- <link rel="stylesheet" href="css/mutual.css"> -->
+    <script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+    <title>Document</title>
+    <style>
+        .list-unstyled{
+            display:none;
+        }
+
+
+        .list-unstyled>li{
+            float:left;
+        }
+
+        
+
+        .list-unstyled li{
+            width:100px;
+            height:50px;
+            text-align:center;
+            background-color: aquamarine;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style-type: none;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        .nav{
+            text-align: center;
+            line-height: 50px;
+            position: relative;
+            margin: 100px auto;
+            height: 50px;
+            width: 306px;
+            border: 1px solid gray;
+        }
+        .nav li  {
+            width: 100px;
+            border: 1px solid gray;
+            float: left;
+        }
+        .nav ul{
+            display:none;
+        }
+        .nav ul li {
+            margin-left: -1px;
+            border-left: 1px solid goldenrod;
+            border-right: 1px solid goldenrod;
+            border-bottom: 1px solid goldenrod;
+        }
+        .nav ul li:hover{
+            background-color: darkgoldenrod ;
+        }
+
+        .forum li{
+            width:100px;
+            float:left;
+        }
+
+        .forum ul{
+            display:none;
+        }
+
+        .forum ul li:hover{
+            background-color: orange;
+        }
+
+        .forum{
+            height:100px;
+        }
+
+        .forum{
+            text-align: center;
+            line-height: 50px;
+            position: relative;
+            margin: 100px auto;
+            height: 50px;
+            width: 306px;
+            border: 1px solid gray;
+        }
+
+
+
+
+
+    </style>
+
+
+    </style>
+</head>
+<body>
+
+    <li>
+        <a href="#">Forum</a>
+        <ul class="list-unstyled">
+            <li>
+                <a href="#" class="t">四级</a>
+            </li>
+            <li>
+                <a href="#" class="t">六级</a>
+            </li>
+            <li>
+                <a href="#" class="t">资料</a>
+            </li>
+            <li>
+                <a href="#" class="t">四级</a>
+            </li>
+        </ul>
+    </li>
+
+
+    <ul class="nav">
+        <li>
+            <a href="">手机</a>
+            <ul>
+                <li><a href="">华为</a></li>
+                <li><a href="">iPhone</a></li>
+                <li><a href="">oppo</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="">电脑</a>
+            <ul>
+                <li><a href="">苹果</a></li>
+                <li><a href="">外星人</a></li>
+                <li><a href="">华硕</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="">电视</a>
+            <ul>
+                <li><a href="">长虹</a></li>
+                <li><a href="">康佳</a></li>
+                <li><a href="">联想</a></li>
+            </ul>
+        </li>
+    </ul>
+
+
+    <ul class="forum">
+        <li>
+            <a href="#">Forum</a>
+            <ul>
+                <li><a href="#">华为</a></li>
+                <li><a href="#">iPhone</a></li>
+                <li><a href="#">oppo</a></li>
+            </ul>
+        </li>
+    </ul>
+    <li class="forum1">
+        <a href="#">Forum</a>
+        <ul>
+            <li><a href="#">华为</a></li>
+            <li><a href="#">iPhone</a></li>
+            <li><a href="#">oppo</a></li>
+        </ul>
+    </li>
+
+    
+
+
+</body>
+
+<script>
+    var nav = document.querySelector(".nav");
+    var lis = nav.children;  //获取3个li
+    for(var i = 0; i < lis.length; i++){
+        lis[i].onmouseover = function(){
+          //这里的this指向lis.[]
+            this.children[1].style.display = "block";
+        }
+        lis[i].onmouseout = function(){
+            this.children[1].style.display = "none";
+        }
+    }
+
+    
+    var forum = document.querySelector(".forum");
+    var lis = forum.children;  //获取n个li
+    for(var i = 0; i < lis.length; i++){
+        lis[i].onmouseover = function(){
+          //这里的this指向lis.[]
+            this.children[1].style.display = "block";
+        }
+        lis[i].onmouseout = function(){
+            this.children[1].style.display = "none";
+        }
+    }
+
+    var forum = document.querySelector(".forum1");
+    var lis = forum.children;  //获取n个li
+    lis.onmouseover = function(){
+        //这里的this指向lis.[]
+        this.children[1].style.display = "block";
+    }
+    lis.onmouseout = function(){
+        this.children[1].style.display = "none";
+    }
+     
+</script>
+
+</html>

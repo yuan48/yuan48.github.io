@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+    <link rel="stylesheet" href="css/mutual.css">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: var(--light_gray);
+        }
+        .form input{
+            font-size: 18px;
+        }
+        .message p{
+            font-size: 15px;
+            margin:5px auto;
+        }
+        .message a{
+            font-size:15px;
+        }
+
+        .login_button{
+         font-family: 'Roboto', sans-serif;text-transform: uppercase; outline: 0;background: orange;
+width: 100%;border: 0;padding: 15px;color: #FFFFFF;font-size: 14px;-webkit-transition: all 0.3 ease;transition: all 0.3 ease;cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <img src="images/pic1.webp" alt="logo" class="logo">
+        <p>英语平台</p>
+        <!-- <a href class="logo"><i class="fas-fa-untensils"></i>English</a> -->
+  
+        <ul class="main-menu">
+            <!-- <a href="#home" class="active">home</a> -->
+            <li><a href="index.html">Home</a></li>
+            <li><a href="bbs_index.html">Forum</a></li>
+            <li><a href="translate.html">Utils</a></li>
+            <li><a href="class.html">Class</a></li>
+            <li><a href="materials.html">World</a></li>
+        </ul>
+  
+        <div class="icons">
+             
+            <a href="#" class="fa fa-search" id="search-icon"></a>
+            <a href="user.html" class="fa fa-user"></a>
+        </div>
+      </nav>
+
+
+    <div class="login-page" style="width:500px;margin:330px auto">
+        <div class="form">
+          <form class="register-form">
+            <input type="text" placeholder="username" name="username"/>
+            <input type="password" placeholder="password" name="password"/>
+            <input type="text" placeholder="input 大一/大二/大三" name="grade" />
+            <input type="text" placeholder="class" name= "userclass"/>
+            <input class="login_button" type="submit" value="register" style="font-family: 'Roboto', sans-serif;text-transform: uppercase; outline: 0;background: orange;
+width: 100%;border: 0;padding: 15px;color: #FFFFFF;font-size: 14px;-webkit-transition: all 0.3 ease;transition: all 0.3 ease;cursor: pointer;">
+            <div class="message" style="margin:10px auto">
+                <p>Already registered? </p>
+                <a href="#" style="color:var(--orange)">Sign In</a>
+            </div>
+          </form>
+          <form class="login-form">
+            <input type="text" placeholder="username" name="username"/>
+            <input type="password" placeholder="password" name="password"/>
+            <input class="login_button" type="submit" value="login" style="font-family: 'Roboto', sans-serif;text-transform: uppercase; outline: 0;background: orange;
+            width: 100%;border: 0;padding: 15px;color: #FFFFFF;font-size: 14px;-webkit-transition: all 0.3 ease;transition: all 0.3 ease;cursor: pointer;">
+            <div class="message" style="margin:10px auto">
+                <p>Not registered? </p>
+                <a href="#" style="color:var(--orange)">Create an account</a>
+            </div>
+          </form>
+        </div>
+      </div>
+</body>
+<script type="text/javascript">
+    $('.message a').click(function(){
+    $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+});
+</script>
+</html>
